@@ -1,25 +1,31 @@
-<?php $this->load->view('templates/header'); ?>
+<?php $this->load->view('templates/header');
 
-<?php $this->load->view('templates/admin_navbar'); ?>
+	if($this->session->user_type == 0)
+	{
+		$this->load->view('templates/admin_navbar');
+	}
+	else 
+	$this->load->view('templates/user_navbar');
+?>
 
 <div class="container">
 <div class="main"><br>
-	<div class="alert alert-dismissible alert-success">
-	<h4 class="alert-heading">Collectors</h4>
-	<p class="mb-0">Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
+	<div class="alert alert-dismissible alert-info">
+	<h4 class="alert-heading text-dark">Garbage Collection Report</h4>
+	<p class="mb-0 text-dark">Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et</p>
 	</div>
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container-fluid">
 
-			<button class="btn btn-primary">Add New Collector <i class="fa fa-user-plus"></i></button>
 
 			<div class="collapse navbar-collapse" id="navbarColor01">
 			<ul class="navbar-nav me-auto">
 
 			</ul>
 			<form class="d-flex">
-				<input class="form-control me-sm-2" type="text" placeholder="Search">
+				<input class="form-control" type="text" placeholder="From" style="margin-right:10px;"> 
+				<input class="form-control" type="text" placeholder="to">
 				<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
 			</form>
 			</div>
@@ -47,5 +53,5 @@
 </div>
 
 
-<script src="<?=base_url("support/js/collectors.js")?>"></script>
+<script src="<?=base_url("support/js/reports.js")?>"></script>
 <?php $this->load->view('templates/footer'); ?>

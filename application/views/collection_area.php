@@ -1,6 +1,6 @@
 <?php $this->load->view('templates/header'); ?>
 
-<?php $this->load->view('templates/user_navbar'); ?>
+<?php $this->load->view('templates/admin_navbar'); ?>
 
 
 <div class="container">
@@ -18,20 +18,20 @@
 			</ul>
 			<form class="d-flex">
 				<div class="form-floating me-sm-1">
-					<input type="email" class="form-control me-sm-2" id="floatingInput" placeholder="name@example.com" readonly>
+					<input type="email" class="form-control me-sm-2" id="floatingInput" placeholder="name@example.com">
 					<label for="floatingInput">Latitude</label>
 				</div>
 
 				<div class="form-floating me-sm-1">
-					<input type="email" class="form-control me-sm-2" id="floatingInput" placeholder="name@example.com" readonly>
+					<input type="email" class="form-control me-sm-2" id="floatingInput" placeholder="name@example.com">
 					<label for="floatingInput">Longtitude</label>
 				</div>
 
 				<div class="form-floating me-sm-1">
-					<input type="email" class="form-control me-sm-2" id="floatingInput" placeholder="name@example.com" readonly>
+					<input type="email" class="form-control me-sm-2" id="floatingInput" placeholder="name@example.com">
 					<label for="floatingInput">Land Mark</label>
 				</div>
-				<button class="btn btn-secondary my-2 my-sm-0" type="submit">Collect</button>
+				<button class="btn btn-secondary my-2 my-sm-0" type="submit">Save</button>
 			</form>
 			</div>
 		</div>
@@ -45,5 +45,5 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFGkPnKplqx55cu6RA_tVY9xdypd8YDZg&callback=initMap&libraries=&v=weekly"
       async>
 </script>
-<script src="<?=base_url("support/js/collect_garbage.js")?>"></script>
+<script src="<?=base_url("support/js/collection_area.js")?>"></script>
 <?php $this->load->view('templates/footer'); ?>

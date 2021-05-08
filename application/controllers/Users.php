@@ -44,6 +44,21 @@ class Users extends Users_class {
 		$this->load->view('collectors');
 	}
 
+	public function vw_reports()
+	{
+		$this->load->view('reports');
+	}
+
+	public function vw_collection_area()
+	{
+		$this->load->view('collection_area');
+	}
+
+	public function vw_collect_garbage()
+	{
+		$this->load->view('collect_garbage');
+	}
+
 	// logic
 	public function validate()
 	{
@@ -66,5 +81,6 @@ class Users extends Users_class {
 		session_destroy();
 		redirect(base_url());
 	}
+
 
 }

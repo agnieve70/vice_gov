@@ -1,6 +1,7 @@
-//navbar active
-// $('.nav-link').removeClass("active");
-$('#dashboard').addClass("active");
+
+
+// navbar active
+$('#collect_garbage').addClass("active");
 
 function initMap() {
 	const myLatlng = { lat: 6.7575, lng: 125.3524 };
