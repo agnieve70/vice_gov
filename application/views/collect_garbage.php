@@ -43,7 +43,7 @@
 
 <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFGkPnKplqx55cu6RA_tVY9xdypd8YDZg&callback=initMap&libraries=&v=weekly"
-      async>
+      async defer>
 </script>
 <script src="<?=base_url("support/js/collect_garbage.js")?>"></script>
 <?php $this->load->view('templates/footer'); ?>

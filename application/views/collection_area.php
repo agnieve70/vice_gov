@@ -16,20 +16,20 @@
 			<ul class="navbar-nav me-auto">
 
 			</ul>
-			<form class="d-flex">
+			<form class="d-flex" method="post" id="formArea">
 				<div class="form-floating me-sm-1">
-					<input type="email" class="form-control me-sm-2" id="floatingInput" placeholder="name@example.com">
-					<label for="floatingInput">Latitude</label>
+					<input type="text" class="form-control me-sm-2" id="latitude" placeholder="name@example.com">
+					<label for="latitude">Latitude</label>
 				</div>
 
 				<div class="form-floating me-sm-1">
-					<input type="email" class="form-control me-sm-2" id="floatingInput" placeholder="name@example.com">
-					<label for="floatingInput">Longtitude</label>
+					<input type="text" class="form-control me-sm-2" id="longtitude" name="longtitude" placeholder="name@example.com">
+					<label for="longtitude">Longtitude</label>
 				</div>
 
 				<div class="form-floating me-sm-1">
-					<input type="email" class="form-control me-sm-2" id="floatingInput" placeholder="name@example.com">
-					<label for="floatingInput">Land Mark</label>
+					<input type="text" class="form-control me-sm-2" id="land_mark" name="land_mark" placeholder="name@example.com">
+					<label for="land_mark">Land Mark</label>
 				</div>
 				<button class="btn btn-secondary my-2 my-sm-0" type="submit">Save</button>
 			</form>
@@ -42,8 +42,8 @@
 </div>
 
 <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFGkPnKplqx55cu6RA_tVY9xdypd8YDZg&callback=initMap&libraries=&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFGkPnKplqx55cu6RA_tVY9xdypd8YDZg&libraries=&v=weekly"
       async>
 </script>
-<script src="<?=base_url("support/js/collection_area.js")?>"></script>
+<script src="<?=base_url("support/js/collection_area.js")?>" type="module"></script>
 <?php $this->load->view('templates/footer'); ?>

@@ -19,8 +19,8 @@
 
 
 <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFGkPnKplqx55cu6RA_tVY9xdypd8YDZg&callback=initMap&libraries=&v=weekly"
-      async>
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFGkPnKplqx55cu6RA_tVY9xdypd8YDZg&libraries=&v=weekly"
+      async defer>
 </script>
-<script src="<?=base_url("support/js/admin_dashboard.js")?>"></script>
+<script src="<?=base_url("support/js/admin_dashboard.js")?>" type="module"></script>
 <?php $this->load->view('templates/footer'); ?>

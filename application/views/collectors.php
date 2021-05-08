@@ -9,43 +9,23 @@
 	<p class="mb-0">Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
 	</div>
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="container-fluid">
-
-			<button class="btn btn-primary">Add New Collector <i class="fa fa-user-plus"></i></button>
-
-			<div class="collapse navbar-collapse" id="navbarColor01">
-			<ul class="navbar-nav me-auto">
-
-			</ul>
-			<form class="d-flex">
-				<input class="form-control me-sm-2" type="text" placeholder="Search">
-				<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-			</form>
-			</div>
-		</div>
-	</nav>
-	<table class="table table-hover">
+	<table class="table table-hover" id="collectorsTable">
 			<thead>
 				<tr>
-				<th scope="col">Type</th>
-				<th scope="col">Column heading</th>
-				<th scope="col">Column heading</th>
-				<th scope="col">Column heading</th>
+				<th scope="col">#</th>
+				<th scope="col">Email</th>
+				<th scope="col">Password</th>
+				<th scope="col">Usertype</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr class="table-light">
-				<th scope="row">Active</th>
-				<td>Column content</td>
-				<td>Column content</td>
-				<td>Column content</td>
-				</tr>
 			</tbody>
 		</table>
+
 </div>
 </div>
 
-
-<script src="<?=base_url("support/js/collectors.js")?>"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
+<script src="<?=base_url("support/js/collectors.js")?>"  type="module"></script>
 <?php $this->load->view('templates/footer'); ?>
