@@ -38,7 +38,28 @@ class Garbage_class extends CI_Controller implements interface_garbage
 
 	public function getGarbages()
 	{
-		
+		$result = $this->garbage_mdl->getGarbages();
+		$data = array();
+		foreach($result as $row)
+		{
+			$data[] = array(
+				$row->collect_id,
+				$row->email,
+				$row->land_mark,
+				$row->weight,
+				$row->barangay,
+				$row->date_time
+			);
+		}
+
+		$output = array(
+			"draw" => intval($_POST["draw"]),
+			"recordsTotal" => $this->getTotalGarbageCollected(),
+			"recordsFiltered" => $this->getTotalGarbageCollected(),
+			"data" => $data
+		);
+
+		return $output;
 	}
 
 	public function collectGarbage()
@@ -58,6 +79,12 @@ class Garbage_class extends CI_Controller implements interface_garbage
 	public function getGarbageCollector($garbage_id)
 	{
 		
+	}
+
+	public function getTotalGarbageCollected()
+	{
+		$result = $this->garbage_mdl->getTotalGarbageCollected();
+		return $result;
 	}
 
 }

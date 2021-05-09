@@ -14,44 +14,25 @@
 	<h4 class="alert-heading text-dark">Garbage Collection Report</h4>
 	<p class="mb-0 text-dark">Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et</p>
 	</div>
-
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="container-fluid">
-
-
-			<div class="collapse navbar-collapse" id="navbarColor01">
-			<ul class="navbar-nav me-auto">
-
-			</ul>
-			<form class="d-flex">
-				<input class="form-control" type="text" placeholder="From" style="margin-right:10px;"> 
-				<input class="form-control" type="text" placeholder="to">
-				<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-			</form>
-			</div>
-		</div>
-	</nav>
-	<table class="table table-hover">
-			<thead>
-				<tr>
-				<th scope="col">Type</th>
-				<th scope="col">Column heading</th>
-				<th scope="col">Column heading</th>
-				<th scope="col">Column heading</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class="table-light">
-				<th scope="row">Active</th>
-				<td>Column content</td>
-				<td>Column content</td>
-				<td>Column content</td>
-				</tr>
-			</tbody>
-		</table>
+	<table class="table table-hover" id="collectorsTable">
+		<thead>
+			<tr>
+			<th scope="col">#</th>
+			<th scope="col">Collector</th>
+			<th scope="col">Land Mark</th>
+			<th scope="col">Weight</th>
+			<th scope="col">Barangay</th>
+			<th scope="col">Date Time</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
 </div>
 </div>
 
 
 <?php $this->load->view('templates/footer'); ?>
-<script src="<?=base_url("support/js/reports.js")?>"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
+<script src="<?=base_url("support/js/reports.js")?>" type="module"></script>

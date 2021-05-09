@@ -10,4 +10,5 @@ interface interface_garbage {
 	public function getGarbage($garbage_id);
 	public function getGarbageCollector($garbage_id);
 	public function collectGarbage();
+	public function getTotalGarbageCollected();
 }

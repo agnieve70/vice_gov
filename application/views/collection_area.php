@@ -47,9 +47,10 @@
 </div>
 </div>
 
+
+<?php $this->load->view('templates/footer'); ?>
 <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFGkPnKplqx55cu6RA_tVY9xdypd8YDZg&libraries=&v=weekly"
       async>
 </script>
 <script src="<?=base_url("support/js/collection_area.js")?>" type="module"></script>
-<?php $this->load->view('templates/footer'); ?>

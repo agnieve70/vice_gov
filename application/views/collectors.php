@@ -9,7 +9,7 @@
 	<p class="mb-0">Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
 	</div>
 
-	<table class="table table-hover" id="collectorsTable">
+		<table class="table table-hover" id="collectorsTable">
 			<thead>
 				<tr>
 				<th scope="col">#</th>
