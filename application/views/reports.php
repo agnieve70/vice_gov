@@ -14,6 +14,7 @@
 	<h4 class="alert-heading text-dark">Garbage Collection Report</h4>
 	<p class="mb-0 text-dark">Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et</p>
 	</div>
+	<div class="table-responsive">
 	<table class="table table-hover" id="collectorsTable">
 		<thead>
 			<tr>
@@ -28,6 +29,7 @@
 		<tbody>
 		</tbody>
 	</table>
+	</div>
 </div>
 </div>
 
