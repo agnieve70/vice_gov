@@ -10,7 +10,7 @@
       <ul class="navbar-nav me-auto">
 
 				<li class="nav-item">
-          <a id="dashboard" class="nav-link" href="<?=base_url("users/vw_admin_dashboard")?>"> <i class="fa fa-dashboard"></i> Dashboard
+          <a id="dashboardsss" class="nav-link" href="<?=base_url("users/vw_admin_dashboard")?>"> <i class="fa fa-dashboard"></i> Dashboard
           </a>
         </li>
 

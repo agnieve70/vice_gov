@@ -53,5 +53,5 @@
 </div>
 
 
-<script src="<?=base_url("support/js/reports.js")?>"></script>
 <?php $this->load->view('templates/footer'); ?>
+<script src="<?=base_url("support/js/reports.js")?>"></script>

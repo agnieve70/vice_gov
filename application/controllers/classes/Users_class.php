@@ -51,7 +51,8 @@ class Users_class extends CI_Controller implements interface_login
 	{
 		return $this->user_mdl->register(
 			array("email" => $this->getEmail(),
-			      "password" => password_hash($this->getPassword(), PASSWORD_BCRYPT)));
+			      "password" => password_hash($this->getPassword(), PASSWORD_BCRYPT)
+				));
 	}
 
 }

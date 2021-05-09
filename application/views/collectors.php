@@ -14,8 +14,6 @@
 				<tr>
 				<th scope="col">#</th>
 				<th scope="col">Email</th>
-				<th scope="col">Password</th>
-				<th scope="col">Usertype</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -25,7 +23,8 @@
 </div>
 </div>
 
+<?php $this->load->view('templates/footer'); ?>
+
 <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
 <script src="<?=base_url("support/js/collectors.js")?>"  type="module"></script>
-<?php $this->load->view('templates/footer'); ?>

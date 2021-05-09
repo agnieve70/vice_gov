@@ -14,22 +14,28 @@
 
 			<div class="collapse navbar-collapse" id="navbarColor01">
 			<ul class="navbar-nav me-auto">
-
+				<div id="qrcode"></div>
 			</ul>
 			<form class="d-flex" method="post" id="formArea">
 				<div class="form-floating me-sm-1">
-					<input type="text" class="form-control me-sm-2" id="latitude" placeholder="name@example.com">
+					<input type="text" class="form-control me-sm-2" id="latitude" name="latitude" placeholder="name@example.com"  readonly>
 					<label for="latitude">Latitude</label>
 				</div>
 
 				<div class="form-floating me-sm-1">
-					<input type="text" class="form-control me-sm-2" id="longtitude" name="longtitude" placeholder="name@example.com">
+					<input type="text" class="form-control me-sm-2" id="longtitude" name="longtitude" placeholder="name@example.com" readonly>
 					<label for="longtitude">Longtitude</label>
 				</div>
 
 				<div class="form-floating me-sm-1">
 					<input type="text" class="form-control me-sm-2" id="land_mark" name="land_mark" placeholder="name@example.com">
 					<label for="land_mark">Land Mark</label>
+				</div>
+
+				<div class="form-floating me-sm-1">
+					<select class="form-control me-sm-2" id="barangay" name="barangay">
+					</select>
+					<label for="barangay">Barangay</label>
 				</div>
 				<button class="btn btn-secondary my-2 my-sm-0" type="submit">Save</button>
 			</form>

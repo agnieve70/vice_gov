@@ -10,11 +10,12 @@ $(document).ready(function()
 	const map = new collection_area_module();
 	map.initMap();
 
+	map.getBarangays();
+
 	$('#formArea').submit(function(e){
 		e.preventDefault();
 
-		alert("payts");
-
-		
+		map.addArea($(this).serialize());
 	})
+	
 });

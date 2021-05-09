@@ -1,38 +1,52 @@
-
-
 // navbar active
+const base_url = window.location.origin;
+
 $('#collect_garbage').addClass("active");
 
-function initMap() {
-	const myLatlng = { lat: 6.7575, lng: 125.3524 };
-	const map = new google.maps.Map(document.getElementById("map"), {
-		zoom: 16,
-		center: myLatlng,
-	});
-	// Create the initial InfoWindow.
-	let infoWindow = new google.maps.InfoWindow({
-		content: "Click the map to get Lat/Lng!",
-		position: myLatlng,
-	});
-	infoWindow.open(map);
-	// Configure the click listener.
-	map.addListener("click", (mapsMouseEvent) => {
-		// Close the current InfoWindow.
-		infoWindow.close();
-		// Create a new InfoWindow.
-		infoWindow = new google.maps.InfoWindow({
-			position: mapsMouseEvent.latLng,
+$(document).ready(function()
+{
+	let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+		scanner.addListener('scan', function (content)
+		{
+			$('#content').val(content);
+			$('#CollectGarbageModal').modal('show');
 		});
-		const lat = mapsMouseEvent.latLng.toJSON();
-		console.log(lat.lat);
-		console.log(lat.lng);
-		$('#lat').val(lat.lat);
-		$('#long').val(lat.lng);
-		const str = JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2);
-		infoWindow.setContent(
-			`This will appear to your address location on profile \n
-			`+ str
-		);
-		infoWindow.open(map);
-	});
-}
+
+		$('#btnSave').click(function()
+		{
+			const name = $('#name').val();
+			const content = $('#content').val();
+
+			$.ajax({
+				url: `${base_url}/collect_garbage/saveCollectedGarbage`,
+				method: 'post',
+				data: {garbage: name, area_id: content},
+				dataType: 'json',
+				success: function(data)
+				{
+					if(data.result === true)
+					{
+						swal("Success", "Garbage Collected successfully", "success");
+						$('#CollectGarbageModal').modal('hide');
+					}
+					swal("Saving Failed", `${err}`, "error");
+				},
+				error: function(err)
+				{
+					swal("Saving Failed", `${err}`, "error");
+				}
+			});
+		})
+
+		Instascan.Camera.getCameras().then(function (cameras) {
+			if (cameras.length > 0) {
+				scanner.start(cameras[1]);
+			} else {
+				alert('No cameras found.');
+			}
+			}).catch(function (e) {
+			alert(e);
+		});
+
+});
+

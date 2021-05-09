@@ -1,10 +1,13 @@
+
 import {collection_area_module} from "./modules/collection_area_module.js";
 
-//navbar active
-$('#dashboard').addClass("active");
+// navbar active
+$('#dashboardsss').addClass("active");
+
 
 $(document).ready(function()
 {
-	const map = new collection_area_module(map);
+	const map = new collection_area_module();
 	map.initMap();
+
 });
